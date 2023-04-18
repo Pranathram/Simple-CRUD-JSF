@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>    
+        <title>Developer Detail</title>
+        <h:outputStylesheet name="resources/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Developer</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="username" class="control-label col-sm-2">Name</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:outputText value="#{editUser.name} #{editUser.lastname}" class="form-control" style="background-color: lightgrey"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="email" class="control-label col-sm-2">Email</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:outputText value="#{editUser.email}" class="form-control" style="background-color: lightgrey"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="skills" class="control-label col-sm-2">Skills</h:outputLabel>
+                <div class="col-sm-1">
+                   <h:outputText id="skills" value="#{editUser.skills}" style="white-space: pre-wrap;" escape="false" />
+                <div class="col-sm-6">
+    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    
+            <div class="col-sm-5">
+                    <h:selectOneMenu id="skillsDropdown" value="#{editUser.skills}">
+                    <f:selectItem itemValue="java" itemLabel="Java language skill" />
+                    <f:selectItem itemValue="javascript" itemLabel="JavaScript language skill" />
+                    <f:selectItem itemValue="ruby" itemLabel="Ruby language skill" />
+                    <f:selectItem itemValue="angularjs" itemLabel="AngularJS framework skill" />
+                </h:selectOneMenu>
+            </div>
+                    <h:commandButton value="Add Skill" action="#{user.update(editUser)}" class="btn btn-primary" style="width: 100px;"></h:commandButton>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
