@@ -1,4 +1,4 @@
-# Simple-CRUD-JSF
+# Simple developer portal using java, jsf, maven.
 
 1.Developer List: serves the following functionality
 
