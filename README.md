@@ -1,5 +1,7 @@
 # Simple developer portal using java, jsf, maven.
 
+URL: http://localhost:8080/developers/
+
 1.Developer List: serves the following functionality
 
 *Displays the list of developers/skills in the table form.
